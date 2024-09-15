@@ -1,0 +1,26 @@
+{
+  "variable": {
+    "container_access_type": [
+      {
+        "default": "private",
+        "description": "The access type for the container (private, blob, container)",
+        "nullable": true,
+        "type": "string"
+      }
+    ],
+    "container_name": [
+      {
+        "description": "The name of the container in the storage account",
+        "nullable": false,
+        "type": "string"
+      }
+    ],
+    "storage_account_name":[
+      {
+        "description": "The name of the storage account. Drag, drop and connect a storage account to create a new one.",
+        "nullable": false,
+        "type": "string"
+      }
+    ]
+  }
+}

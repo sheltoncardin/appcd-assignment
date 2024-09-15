@@ -1,0 +1,84 @@
+{
+  "module": {
+    "appcd_1cee0b8c-b9be-595e-aa25-cc334fcf3b64": {
+      "curve": "P-256",
+      "expiration_date": "2006-01-02T15:04:05Z",
+      "expire_after": null,
+      "key_name": "spring-petclinic-init",
+      "key_opts": [
+        "encrypt",
+        "decrypt",
+        "sign",
+        "unwrapKey",
+        "verify",
+        "wrapKey"
+      ],
+      "key_size": 2048,
+      "key_type": "RSA",
+      "key_vault_id": "${var.key_vault_id}",
+      "location": "${var.location}",
+      "not_before_date": null,
+      "notify_before_expiry": null,
+      "resource_group_name": "${local.resource_group_name}",
+      "source": "./modules/azurerm_key_vault_key",
+      "tags": {
+        "appstack": "appcd",
+        "component": "spring-petclinic-azure"
+      },
+      "time_after_creation": null,
+      "time_before_expiry": null
+    },
+    "appcd_3e02d187-d1d0-454d-a826-ddab916b4aaf": {
+      "actions": [
+        "Microsoft.KeyVault/vaults/keys/read"
+      ],
+      "assignable_scopes": null,
+      "data_actions": [
+        "Microsoft.KeyVault/vaults/keys/decrypt/action"
+      ],
+      "description": "Role definition for spring-petclinic-azure spring-petclinic-init Azure Key Vault Key",
+      "location": "${var.location}",
+      "name": "spring-petclinic-azure spring-petclinic-init Azure Key Vault Key Role",
+      "not_actions": null,
+      "not_data_actions": null,
+      "principal_id": "${module.appcd_76da7cb4-51f4-50e6-aae5-618d34eae8b3.principal_id}",
+      "resource_group_name": "${local.resource_group_name}",
+      "scope": "${module.appcd_1cee0b8c-b9be-595e-aa25-cc334fcf3b64.id}",
+      "source": "./modules/azurerm_role_definition"
+    },
+    "appcd_436edaac-1b5f-4e57-b729-37eaafb8e74e": {
+      "actions": null,
+      "assignable_scopes": null,
+      "data_actions": [
+        "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read",
+        "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/delete",
+        "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/deleteBlobVersion/action"
+      ],
+      "description": "Role definition for spring-petclinic-azure spring-petclinic-init Azure Key Vault Key",
+      "location": "${var.location}",
+      "name": "spring-petclinic-azure spring-petclinic-init Azure Storage Container Role",
+      "not_actions": null,
+      "not_data_actions": null,
+      "principal_id": "${module.appcd_76da7cb4-51f4-50e6-aae5-618d34eae8b3.principal_id}",
+      "resource_group_name": "${local.resource_group_name}",
+      "scope": "${module.appcd_e028fb84-ce37-54f0-9e0d-2f31c9ac840d.id}",
+      "source": "./modules/azurerm_role_definition"
+    },
+    "appcd_76da7cb4-51f4-50e6-aae5-618d34eae8b3": {
+      "custom_role_definitions": [],
+      "location": "${var.location}",
+      "name": "spring-petclinic-azure-role",
+      "resource_group_name": "${local.resource_group_name}",
+      "role_assignments": [],
+      "source": "./modules/azurerm_user_assigned_managed_identity"
+    },
+    "appcd_e028fb84-ce37-54f0-9e0d-2f31c9ac840d": {
+      "container_access_type": "private",
+      "container_name": "spring-petclinic-init",
+      "location": "${var.location}",
+      "resource_group_name": "${local.resource_group_name}",
+      "source": "./modules/azurerm_storage_container",
+      "storage_account_name": "${var.storage_account_name}"
+    }
+  }
+}

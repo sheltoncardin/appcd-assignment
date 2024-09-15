@@ -1,0 +1,20 @@
+{
+  "variable": {
+    "key_vault_id": [
+      {
+        "description": "The id of an existing Key Vault. (Drag a Key Vault resource and make connection to deploy this key in the Key Vault.)",
+        "type": "string",
+        "nullable": false,
+        "sensitive": false
+      }
+    ],
+    "storage_account_name": [
+      {
+        "description": "The name of the storage account. Drag, drop and connect a storage account to create a new one.",
+        "type": "string",
+        "nullable": false,
+        "sensitive": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+apiVersion: v2
+appVersion: 1.0.0
+dependencies:
+- alias: redis-c56101c63af65c6e87b85b045c2029c1
+  name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: ~18.6.1
+- alias: postgresql-90e0852dec7b54b7b5408285e85c22b3
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: ~13.4.3
+- alias: postgresql-9b3eebdd882a526b9ee933ecd1fc9edf
+  name: postgresql
+  repository: https://charts.bitnami.com/bitnami
+  version: ~13.4.3
+description: Generated helm chart created for service "appcd" with appcd
+name: appcd
+type: application
+version: 0.1.0
