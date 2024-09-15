@@ -1,12 +1,12 @@
 variable "service_account_id" {
-  type = string
+  type        = string
   description = "Service Account ID to be created"
 }
 
 variable "service_account_name" {
-  type = string
+  type        = string
   description = "Name to give the service account, defaults to service account ID"
-  default = null
+  default     = null
 }
 
 variable "project_id" {
@@ -15,7 +15,7 @@ variable "project_id" {
 
 
 variable "description" {
-  type = string
+  type        = string
   description = "Description for Service Account Name"
-  default = null
+  default     = null
 }

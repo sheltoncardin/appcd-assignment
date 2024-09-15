@@ -3,6 +3,6 @@ variable "location" {
   description = "The GCPs region."
 }
 variable "bucket_name" {
-  type = string
+  type        = string
   description = "A global unique bucket name"
 }
